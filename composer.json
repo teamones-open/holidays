@@ -1,0 +1,38 @@
+{
+    "name": "teamones/holidays",
+    "description": "节假日查询（法定节假日、周末、农历、节气），teamones 维护版本，兼容 PHP 7.2 - 8.5",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "teamones",
+            "email": "weiwei163@foxmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-iconv": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Teamones\\Holiday\\": "src/"
+        },
+        "files": [
+            "compat.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Teamones\\Holiday\\Tests\\": "test/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
+    }
+}
